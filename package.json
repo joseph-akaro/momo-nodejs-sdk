@@ -1,5 +1,5 @@
 {
-  "name": "momojs",
+  "name": "momopay",
   "version": "1.0.0",
   "description": "MTN MOMO package and Documentations",
   "main": "index.js",
@@ -15,14 +15,14 @@
     "MTN",
     "Momo",
     "momo",
-    "momojs"
+    "momopay"
   ],
   "author": "Joseph Akaro",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joseph-akaro/momojs/issues"
+    "url": "https://github.com/joseph-akaro/momopay/issues"
   },
-  "homepage": "https://github.com/joseph-akaro/momojs#readme",
+  "homepage": "https://github.com/joseph-akaro/momopay#readme",
   "dependencies": {
     "axios": "^1.12.2"
   }
