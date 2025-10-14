@@ -1,0 +1,29 @@
+{
+  "name": "momojs",
+  "version": "1.0.0",
+  "description": "MTN MOMO package and Documentations",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseph-akaro/momojs.git"
+  },
+  "keywords": [
+    "MTN",
+    "Momo",
+    "momo",
+    "momojs"
+  ],
+  "author": "Joseph Akaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseph-akaro/momojs/issues"
+  },
+  "homepage": "https://github.com/joseph-akaro/momojs#readme",
+  "dependencies": {
+    "axios": "^1.12.2"
+  }
+}
