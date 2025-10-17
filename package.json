@@ -1,16 +1,16 @@
 {
   "name": "momopay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joseph-akaro/momojs.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Momo", "MTN", "momo SDK", "MomoPay"],
+  "author": "Joseph Akaro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/joseph-akaro/momojs/issues"

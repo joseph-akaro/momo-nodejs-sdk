@@ -23,7 +23,7 @@ A modern, zero-dependency, fully-typed NodeJS SDK for the MTN Mobile Money (MoMo
 
 ## Prerequisites
 
-Before you start, you need to have an active MTN MoMo Developer account. You can get one from the [MTN MoMo Developer Portal](https://momoapi.mtn.com/).
+Before you start, you need to have an active MTN MoMo Developer account. You can get one from the [MTN MoMo Developer Portal](https://momodeveloperportal.mtn.com/).
 
 You will need the following credentials from your developer portal dashboard:
 
