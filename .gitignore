@@ -1,5 +1,7 @@
+/dist
+/node_modules
+
 .env
-node_modules
-test
-test/
-package-lock.json
+.DS_Store
+
+/test

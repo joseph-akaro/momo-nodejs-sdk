@@ -1,24 +1,33 @@
 {
   "name": "momopay",
-  "version": "1.0.1",
-  "main": "dist/index.js",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joseph-akaro/momojs.git"
   },
-  "keywords": ["Momo", "MTN", "momo SDK", "MomoPay"],
+  "keywords": [
+    "momopay",
+    "MTN",
+    "momo SDK",
+    "SDK",
+    "momo API",
+    "developer"
+  ],
   "author": "Joseph Akaro",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/joseph-akaro/momojs/issues"
   },
   "homepage": "https://github.com/joseph-akaro/momojs#readme",
   "description": "",
   "devDependencies": {
-    "@types/node": "^24.8.1",
+    "tsup": "^8.5.0",
     "typescript": "^5.9.3"
   }
 }
