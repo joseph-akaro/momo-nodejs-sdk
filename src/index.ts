@@ -10,24 +10,28 @@ interface authTypes{
     subscriptionKey: string
 }
 
-class Authentication implements authTypes{
-    
+class Authentication{
+
     constructor(usrId: number, apiKey: string, subscriptionKey: string){
 
     }
-
+    
+    // Request Payment from users
     requestToPay(): void{
 
     }
 
+    // Get Payment Status
     getTransactionStatus(): void{
 
     }
 
+    // Get Account Balance
     getAccountBalance(): void{
 
     }
 
+    // Validate account holder
     validateAccountHolder(): void{
         
     }
