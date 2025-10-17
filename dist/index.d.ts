@@ -1,2 +1,3 @@
-export {};
-//# sourceMappingURL=index.d.ts.map
+declare function greet(): void;
+
+export { greet };

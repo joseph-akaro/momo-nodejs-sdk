@@ -1,0 +1,12 @@
+/src
+/node_modules
+
+
+# Secrets
+.env
+.DS_Store
+
+
+# Development Purposes
+tsconfig.json
+tsup.config.ts
