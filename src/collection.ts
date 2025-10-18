@@ -1,10 +1,19 @@
-import { authType } from "./types"
+import { MomoPay } from ".";
 
-class Collection{
-
+export class Collection extends MomoPay{
     requestToPay(){
 
     }
 
-    
+    getTransactionStatus(){
+
+    }
+
+    getAccountBalance(){
+
+    }
+
+    validateAccountHolder(){
+
+    }
 }
