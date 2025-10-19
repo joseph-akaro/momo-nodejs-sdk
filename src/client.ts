@@ -1,52 +1,23 @@
-// MomoClient:
-import axios from "axios"
+import { MomoConfig } from './types';
+import { ApiClient } from './core/api-client';
+import { Collections } from './module/collection';
+// import { Disbursements } from './modules/disbursements'; // To be added later
 
-// Momo Client Instance
-export class MomoPay{
-    environment: string
-    primarySubscriptionKey: string
-    secondarySubscriptionKey: string
-    apiUser: string
-    callBackUrl:string
+/**
+ * The main entry point for the MTN MoMo SDK.
+ */
+export class MomoClient {
+  public collections: Collections;
+  // public disbursements: Disbursements;
 
-    constructor(environment: string, primarySubscriptionKey:string, secondarySubscriptionKey:string, apiUser:string, callBackUrl:string){
-            this.environment = environment
-            this.primarySubscriptionKey = primarySubscriptionKey
-            this.secondarySubscriptionKey = secondarySubscriptionKey
-            this.apiUser = apiUser
-            this.callBackUrl = callBackUrl
-    }
+  private apiClient: ApiClient;
 
-    async authenticateUser(primarySubscriptionKey:string, apiUser:string){
-        this.primarySubscriptionKey = primarySubscriptionKey
-        this.apiUser = apiUser
-        try {
-            switch(this.environment){
-                case 'sandbox':
-                    const token = await axios(
-                       {
-                        url: "https://sandbox.momodeveloper.mtn.com/collection/oauth2/token/",
-                        data:{
-                            primarySubscriptionKey: primarySubscriptionKey,
-                            apiUser: apiUser
-                        }
-                       }
-                    ).catch(
-                        (error) => {
-                            throw new Error("Error:", error.message)
-                        }
-                    ).then(
-                        (data) =>{
-                            console.log(data)
-                        }
-                    )
-                case 'production':
-                default:
-                    throw new Error('No working environment identified i.e sandbox, production')
-                    break;
-            }
-        } catch (error) {
-            throw console.error("Error:", error)
-        }
-    }
+  constructor(config: MomoConfig) {
+    this.apiClient = new ApiClient(config);
+
+    // Each product uses a different subscription key.
+    // We pass the primary one here as it's often used for Collections.
+    this.collections = new Collections(this.apiClient, config.primarySubscriptionKey);
+    // this.disbursements = new Disbursements(this.apiClient, config.secondarySubscriptionKey);
+  }
 }
